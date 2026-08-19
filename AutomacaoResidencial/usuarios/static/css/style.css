@@ -1,562 +1,172 @@
-/* ==========================================
+/* =========================================
    CONFIGURAÇÕES GERAIS
-   ========================================== */
-
-/*
-   O :root é utilizado para criar variáveis CSS.
-
-   Assim, se você quiser mudar uma cor depois,
-   basta alterar aqui em um único lugar.
-*/
-:root {
-
-  /* Cor de fundo da página */
-  --bg-color: #ffffff;
-
-  /* Cor de fundo do card */
-  --card-bg: #ffffff;
-
-  /* Cor principal dos textos */
-  --text-main: #111827;
-
-  /* Cor dos textos secundários */
-  --text-muted: #6b7280;
-
-  /* Cor das bordas */
-  --border-color: #e2e8f0;
-
-  /* Cor principal dos botões */
-  --primary-color: #000000;
-
-  /* Cor do texto dos botões */
-  --button-text: #ffffff;
-
-  /* Cor dos links */
-  --link-color: #ef4444;
-
-  /* Raio das bordas */
-  --radius: 12px;
-
-  /* Fonte utilizada */
-  --font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
-}
-
-
-/* ==========================================
-   RESET
-   ========================================== */
-
-/*
-   box-sizing: border-box faz com que
-   padding e border sejam contabilizados
-   dentro da largura e altura do elemento.
-*/
-* {
-  box-sizing: border-box;
-}
-
-
-/* ==========================================
-   BODY
-   ========================================== */
+   ========================================= */
 
 body {
-
-  /* Fonte principal */
-  font-family: var(--font-family);
-
-  /* Fundo da página */
-  background-color: var(--bg-color);
-
-  /* Cor padrão dos textos */
-  color: var(--text-main);
-
-  /*
-     min-height: 100vh significa:
-
-     "o body terá no mínimo a altura
-     total da tela".
-  */
-  min-height: 100vh;
-
-  /*
-     Flexbox será utilizado para
-     facilitar a centralização.
-  */
-  display: flex;
-
-  /*
-     Centraliza o conteúdo horizontalmente.
-  */
-  justify-content: center;
-
-  /*
-     Centraliza o conteúdo verticalmente.
-  */
-  align-items: center;
-
-  /* Espaçamento nas bordas da tela */
-  padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
 }
 
 
-/* ==========================================
+/* =========================================
    CONTAINER PRINCIPAL
-   ========================================== */
+   ========================================= */
 
-/*
-   O Bootstrap já possui .container.
-
-   Aqui estamos apenas fazendo pequenos
-   ajustes para nossa tela de login.
-*/
 .container {
-
-  /*
-     Impede que o conteúdo fique
-     muito largo em telas grandes.
-  */
-  max-width: 1100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 
-/* ==========================================
-   COLUNA DO LOGIN
-   ========================================== */
+/* =========================================
+   CARD DE LOGIN
+   ========================================= */
 
-/*
-   O HTML utiliza:
-
-   <div class="col-md-5">
-
-   O Bootstrap controla a largura dessa coluna.
-
-   Não precisamos alterar a largura dela.
-*/
-
-
-/* ==========================================
-   CARD DO LOGIN
-   ========================================== */
-
-/*
-   O HTML possui:
-
-   <div class="card mt-5">
-
-   Portanto, estamos estilizando diretamente
-   a classe .card do Bootstrap.
-*/
 .card {
+    border: none;
+    border-radius: 12px;
 
-  /* Fundo branco */
-  background-color: var(--card-bg);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
 
-  /* Borda suave */
-  border: 1px solid var(--border-color);
-
-  /* Cantos arredondados */
-  border-radius: var(--radius);
-
-  /*
-     Remove a sombra padrão do Bootstrap
-     para deixar o visual mais limpo.
-  */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-  /*
-     Impede que o card fique muito grande.
-  */
-  max-width: 450px;
-
-  /*
-     Centraliza o card.
-  */
-  margin-left: auto;
-  margin-right: auto;
+    overflow: hidden;
 }
 
 
-/* ==========================================
-   CORPO DO CARD
-   ========================================== */
+/* Espaçamento interno */
 
-/*
-   HTML:
-
-   <div class="card-body">
-*/
 .card-body {
-
-  /* Espaçamento interno */
-  padding: 35px;
+    padding: 40px;
 }
 
 
-/* ==========================================
+/* =========================================
    TÍTULO
-   ========================================== */
+   ========================================= */
 
-/*
-   HTML:
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #212529;
+}
 
-   <h1 class="text-center mb-4">
-      Tela de Login
-   </h1>
-*/
-.card h1 {
-
-  /* Tamanho do título */
-  font-size: 2rem;
-
-  /* Peso da fonte */
-  font-weight: 700;
-
-  /* Cor */
-  color: var(--text-main);
-
-  /* Espaçamento abaixo */
-  margin-bottom: 30px !important;
+h1 .bi {
+    margin-right: 8px;
 }
 
 
-/* ==========================================
+/* =========================================
    LABELS
-   ========================================== */
+   ========================================= */
 
-/*
-   HTML:
-
-   <label class="form-label">
-*/
 .form-label {
-
-  /* Deixa o texto um pouco mais forte */
-  font-weight: 600;
-
-  /* Tamanho */
-  font-size: 0.9rem;
-
-  /* Cor */
-  color: var(--text-main);
-
-  /* Espaço abaixo do label */
-  margin-bottom: 7px;
+    font-weight: 500;
+    color: #343a40;
 }
 
 
-/* ==========================================
-   INPUTS
-   ========================================== */
+/* =========================================
+   CAMPOS
+   ========================================= */
 
-/*
-   HTML:
-
-   <input class="form-control">
-   
-   O Bootstrap já possui .form-control.
-
-   Aqui estamos apenas personalizando.
-*/
 .form-control {
+    padding: 10px 12px;
 
-  /* Altura do campo */
-  min-height: 45px;
+    border-radius: 0 6px 6px 0;
 
-  /* Tamanho do texto */
-  font-size: 0.9rem;
-
-  /* Cor do texto digitado */
-  color: var(--text-main);
-
-  /* Fundo branco */
-  background-color: #ffffff;
-
-  /* Borda */
-  border: 1px solid #000000;
-
-  /* Cantos arredondados */
-  border-radius: 6px;
-
-  /* Remove sombras padrão */
-  box-shadow: none;
-
-  /*
-     Transição suave quando o usuário
-     clicar no campo.
-  */
-  transition: border-color 0.2s ease,
-              box-shadow 0.2s ease;
+    min-height: 42px;
 }
 
 
-/* ==========================================
-   PLACEHOLDER
-   ========================================== */
+/* Ícone do campo */
 
-/*
-   Placeholder é o texto que aparece
-   antes do usuário digitar.
-*/
-.form-control::placeholder {
+.input-group-text {
+    background-color: #f8f9fa;
 
-  /* Cinza claro */
-  color: #9ca3af;
+    border-radius: 6px 0 0 6px;
+
+    min-width: 45px;
+
+    justify-content: center;
 }
 
 
-/* ==========================================
-   INPUT QUANDO ESTÁ SELECIONADO
-   ========================================== */
+/* Quando o campo recebe foco */
 
-/*
-   :focus é aplicado quando o usuário
-   clica ou seleciona o input.
-*/
 .form-control:focus {
-
-  /*
-     Mantém a borda preta.
-  */
-  border-color: #000000;
-
-  /*
-     Cria uma pequena sombra ao redor
-     do campo.
-  */
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
-
-  /* Remove o outline padrão */
-  outline: none;
+    box-shadow: none;
+    border-color: #86b7fe;
 }
 
 
-/* ==========================================
-   LINK "ESQUECEU SUA SENHA?"
-   ========================================== */
+/* =========================================
+   LINK DE RECUPERAÇÃO
+   ========================================= */
 
-/*
-   HTML:
-
-   <a href="#" class="text-decoration-none">
-*/
 .text-end a {
+    font-size: 14px;
 
-  /* Cor vermelha */
-  color: var(--link-color);
+    color: #0d6efd;
 
-  /* Tamanho */
-  font-size: 0.85rem;
-
-  /* Transição suave */
-  transition: opacity 0.2s ease;
+    transition: 0.2s;
 }
 
-
-/*
-   Quando o mouse passa sobre o link.
-*/
 .text-end a:hover {
-
-  /* Deixa o link um pouco transparente */
-  opacity: 0.75;
+    text-decoration: underline !important;
 }
 
 
-/* ==========================================
-   ÁREA DOS BOTÕES
-   ========================================== */
+/* =========================================
+   BOTÕES
+   ========================================= */
 
-/*
-   HTML:
-
-   <div class="d-flex justify-content-between">
-
-   O Bootstrap já faz o Flexbox.
-
-   Portanto, não precisamos recriar
-   display: flex aqui.
-*/
-
-
-/* ==========================================
-   TODOS OS BOTÕES
-   ========================================== */
-
-/*
-   O HTML possui:
-
-   class="btn btn-secondary"
-
-   e
-
-   class="btn btn-primary"
-*/
 .btn {
+    padding: 10px 22px;
 
-  /* Altura mínima */
-  min-height: 42px;
+    border-radius: 6px;
 
-  /* Espaçamento horizontal */
-  padding: 8px 20px;
+    font-weight: 500;
 
-  /* Tamanho da fonte */
-  font-size: 0.9rem;
-
-  /* Peso */
-  font-weight: 600;
-
-  /* Cantos arredondados */
-  border-radius: 6px;
-
-  /* Remove borda desnecessária */
-  box-shadow: none;
-
-  /* Transição */
-  transition: opacity 0.2s ease,
-              transform 0.1s ease;
+    transition: 0.2s;
 }
 
 
-/* ==========================================
-   BOTÃO LOGIN
-   ========================================== */
+/* Espaçamento dos ícones */
 
-/*
-   No HTML:
-
-   class="btn btn-primary"
-*/
-.btn-primary {
-
-  /* Fundo preto */
-  background-color: var(--primary-color);
-
-  /* Texto branco */
-  color: var(--button-text);
-
-  /* Borda preta */
-  border-color: var(--primary-color);
+.btn .bi {
+    margin-right: 5px;
 }
 
 
-/*
-   Quando passa o mouse no Login.
-*/
-.btn-primary:hover {
+/* Efeito ao passar o mouse */
 
-  /* Mantém o fundo preto */
-  background-color: #000000;
-
-  /* Mantém a borda */
-  border-color: #000000;
-
-  /* Diminui um pouco a opacidade */
-  opacity: 0.85;
+.btn:hover {
+    transform: translateY(-1px);
 }
 
 
-/*
-   Quando o botão é clicado.
-*/
-.btn-primary:active {
-
-  /*
-     Dá uma pequena sensação de clique.
-  */
-  transform: scale(0.98);
-}
-
-
-/* ==========================================
-   BOTÃO CADASTRO
-   ========================================== */
-
-/*
-   No HTML:
-
-   class="btn btn-secondary"
-*/
-.btn-secondary {
-
-  /* Fundo branco */
-  background-color: #ffffff;
-
-  /* Texto preto */
-  color: #111827;
-
-  /* Borda preta */
-  border: 1px solid #000000;
-}
-
-
-/*
-   Quando o mouse passa sobre Cadastro.
-*/
-.btn-secondary:hover {
-
-  /* Fundo preto */
-  background-color: #000000;
-
-  /* Texto branco */
-  color: #ffffff;
-
-  /* Borda preta */
-  border-color: #000000;
-}
-
-
-/* ==========================================
+/* =========================================
    RESPONSIVIDADE
-   ========================================== */
+   ========================================= */
 
-/*
-   Essa regra será aplicada em telas
-   menores que 768px.
+@media (max-width: 576px) {
 
-   Exemplo:
-   celulares e alguns tablets.
-*/
-@media (max-width: 767px) {
+    .card-body {
+        padding: 25px;
+    }
 
-  /*
-     Diminui o espaço interno do card.
-  */
-  .card-body {
-    padding: 25px 20px;
-  }
+    h1 {
+        font-size: 24px;
+    }
 
+    .d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  /*
-     Diminui o tamanho do título
-     em telas pequenas.
-  */
-  .card h1 {
-    font-size: 1.6rem;
-  }
+    .btn {
+        width: 100%;
+    }
 
-
-  /*
-     O container ocupa praticamente
-     toda a largura disponível.
-  */
-  .container {
-    width: 100%;
-  }
-
-
-  /*
-     Diminui o espaçamento das bordas
-     em celulares.
-  */
-  body {
-    padding: 15px;
-  }
 }
+

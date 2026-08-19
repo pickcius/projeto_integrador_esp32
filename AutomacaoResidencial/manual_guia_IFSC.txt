@@ -33,6 +33,7 @@ pip install django
 django-admin --version
 
 ***Passo 6 - Testar
+*Lembrar de testar na pata certa
 
 python manage.py runserver
 
