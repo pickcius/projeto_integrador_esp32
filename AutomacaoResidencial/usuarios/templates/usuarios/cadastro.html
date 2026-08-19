@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tela de Cadastro</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap/icons/bootstrap-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    
+  </head>
+
+  <body>
+    <main class="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="card cadastro-card">
+        <!-- Cabeçalho --> <div class="text-center mb-4">
+          <i class="bi bi-person-plus-fill cadastro-icon"></i> <h1>Criar uma conta</h1> <p class="cadastro-subtitulo">Preencha os dados abaixo para criar sua conta</p>
+        </div> <!-- Formulário --> <form method="POST">
+          {% csrf_token %} <!-- Nome --> <div class="mb-3">
+            <label for="nome" class="form-label"><i class="bi bi-person-fill"></i> Nome</label> <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required />
+          </div> <!-- E-mail --> <div class="mb-3">
+            <label for="email" class="form-label"><i class="bi bi-envelope-fill"></i> E-mail</label> <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required />
+          </div> <!-- Senha --> <div class="mb-3">
+            <label for="senha" class="form-label"><i class="bi bi-lock-fill"></i> Senha</label> <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required />
+          </div> <!-- Confirmar senha --> <div class="mb-4">
+            <label for="confirmar_senha" class="form-label"><i class="bi bi-shield-lock-fill"></i> Confirmar senha</label> <input type="password" class="form-control" id="confirmar_senha" name="confirmar_senha" placeholder="Digite a senha novamente" required />
+          </div> <!-- Botão cadastrar --> <div class="d-grid">
+            <button type="submit" class="btn btn-cadastro"><i class="bi bi-person-plus-fill"></i> Cadastrar</button>
+          </div>
+        </form> <!-- Link para login --> <div class="text-center cadastro-login">
+          <p>Já possui uma conta?</p> <a href="/login/"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

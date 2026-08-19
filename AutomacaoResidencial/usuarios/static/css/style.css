@@ -170,3 +170,122 @@ h1 .bi {
 
 }
 
+/* == ======================================================= PÁGINA DE CADASTRO ========================================================= */
+/* Cartão principal do cadastro */
+.cadastro-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Ícone do topo */
+.cadastro-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: #dc3545;
+}
+
+/* Título */
+.cadastro-card h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Texto abaixo do título */
+.cadastro-subtitulo {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+.cadastro-card .form-label {
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+/* Ícones dos labels */
+.cadastro-card .form-label i {
+    margin-right: 5px;
+    color: #dc3545;
+}
+
+/* Campos */
+.cadastro-card .form-control {
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding-left: 15px;
+    transition: 0.2s;
+}
+
+/* Campo quando recebe foco */
+.cadastro-card .form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+/* Botão cadastrar */
+.btn-cadastro {
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #dc3545;
+    color: white;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+/* Hover do botão */
+.btn-cadastro:hover {
+    background-color: #bb2d3b;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Ícone do botão */
+.btn-cadastro i {
+    margin-right: 6px;
+}
+
+/* Área do login */
+.cadastro-login {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* Texto */
+.cadastro-login p {
+    margin-bottom: 5px;
+    color: #6c757d;
+}
+
+/* Link Login */
+.cadastro-login a {
+    text-decoration: none;
+    color: #dc3545;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+/* Hover do Login */
+.cadastro-login a:hover {
+    color: #bb2d3b;
+    text-decoration: underline;
+}
+
+/* ========================================================= RESPONSIVIDADE ========================================================= */
+@media (max-width: 500px) {
+    .cadastro-card {
+        padding: 30px 25px;
+    }
+
+    .cadastro-card h1 {
+        font-size: 24px;
+    }
+}
