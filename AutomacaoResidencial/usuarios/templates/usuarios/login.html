@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tela de Login</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap/icons/bootstrap-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="card mt-5">
+            <div class="card-body">
+              <h1 class="text-center mb-4">Tela de Login</h1>
+
+              <form>
+                <!-- E-mail -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">E-mail</label>
+
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" />
+                </div>
+
+                <!-- Senha -->
+                <div class="mb-3">
+                  <label for="senha" class="form-label">Senha</label>
+
+                  <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" />
+
+                  <div class="text-end mt-2">
+                    <a href="#" class="text-decoration-none">Esqueceu sua senha?</a>
+                  </div>
+                </div>
+
+                <!-- Botões -->
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-secondary">Cadastro</button>
+
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
