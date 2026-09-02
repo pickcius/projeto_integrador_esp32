@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
-
+@never_cache
 def login_view(request):
 
     if request.method == 'POST':
@@ -36,7 +36,7 @@ def login_view(request):
 
     return render(request, 'usuarios/login.html')
 
-
+@never_cache
 def cadastro(request):
 
     if request.method == 'POST':
