@@ -2,50 +2,148 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Tela de Login</title>
 
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="{% static 'bootstrap/icons/bootstrap-icons.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
 
-  <body>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="{% static 'bootstrap/icons/bootstrap-icons.css' %}">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-5">
-          <div class="card mt-5">
-            <div class="card-body">
-              <h1 class="text-center mb-4">
-                <i class="bi bi-house-gear"></i>
-                Tela de Login
-              </h1>
 
-              <form>
-                <!-- E-mail --> <div class="mb-3">
-                  <label for="email" class="form-label">E-mail</label> <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-envelope"></i></span> <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" />
-                  </div>
-                </div> <!-- Senha --> <div class="mb-3">
-                  <label for="senha" class="form-label">Senha</label> <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-lock"></i></span> <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" />
-                  </div> <!-- Recuperação de senha --> <div class="text-end mt-2">
-                    <a href="#" class="text-decoration-none">Esqueceu sua senha?</a>
-                  </div>
-                </div> <!-- Botões --> <!-- Botões -->
-                <div class="d-flex justify-content-between mt-4">
-                  <a href="/cadastro/" class="btn btn-secondary"><i class="bi bi-person-plus"></i> Cadastro</a>
+        <div class="row justify-content-center">
 
-                  <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+            <div class="col-md-5">
+
+                <div class="card mt-5">
+
+                    <div class="card-body">
+
+                        <!-- Título -->
+                        <h1 class="text-center mb-4">
+                            <i class="bi bi-house-gear"></i>
+                            Tela de Login
+                        </h1>
+
+
+                        <!-- Formulário de Login -->
+                        <form method="POST">
+
+                            {% csrf_token %}
+
+
+                            <!-- E-mail -->
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">
+                                    E-mail
+                                </label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Digite seu e-mail"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Senha -->
+                            <div class="mb-3">
+
+                                <label for="senha" class="form-label">
+                                    Senha
+                                </label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-lock"></i>
+                                    </span>
+
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="senha"
+                                        name="senha"
+                                        placeholder="Digite sua senha"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- Recuperação de senha -->
+                                <div class="text-end mt-2">
+
+                                    <a href="#" class="text-decoration-none">
+                                        Esqueceu sua senha?
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Botões -->
+                            <div class="d-flex justify-content-between mt-4">
+
+                                <!-- Botão Cadastro -->
+                                <a
+                                    href="{% url 'cadastro' %}"
+                                    class="btn btn-secondary"
+                                >
+                                    <i class="bi bi-person-plus"></i>
+                                    Cadastro
+                                </a>
+
+
+                                <!-- Botão Login -->
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary"
+                                >
+                                    <i class="bi bi-box-arrow-in-right"></i>
+                                    Login
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
                 </div>
-              </form>
+
             </div>
-          </div>
+
         </div>
-      </div>
+
     </div>
 
+
+    <!-- Bootstrap JavaScript -->
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  </body>
+
+</body>
 </html>

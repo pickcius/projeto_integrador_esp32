@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'bootstrap/icons/bootstrap-icons.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    
   </head>
 
   <body>
@@ -30,7 +29,7 @@
             <button type="submit" class="btn btn-cadastro"><i class="bi bi-person-plus-fill"></i> Cadastrar</button>
           </div>
         </form> <!-- Link para login --> <div class="text-center cadastro-login">
-          <p>Já possui uma conta?</p> <a href="/login/"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <p>Já possui uma conta?</p> <a href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         </div>
       </div>
     </main>
